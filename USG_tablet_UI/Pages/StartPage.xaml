@@ -1,0 +1,17 @@
+﻿<Page x:Class="USG_tablet_UI.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+	Title="StartPage">
+
+    <Grid>
+        <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="158,59,0,0" VerticalAlignment="Top" Width="186" Height="35" Click="btnDanePacjentow_Click"/>
+        <Button x:Name="btnUrzadzenia" Content="Urządzenia" HorizontalAlignment="Left" Margin="158,137,0,0" VerticalAlignment="Top" Width="186" Height="35" Click="btnUrzadzenia_Click"/>
+        <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="158,225,0,0" VerticalAlignment="Top" Width="186" Height="35" Click="btnKalendarz_Click"/>
+        <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="377,7,0,0" VerticalAlignment="Top" Width="101" MouseDown="lblUsername_MouseDown"/>
+        <Button x:Name="placeholderTrybik" Content="TRYBIK" HorizontalAlignment="Left" Margin="454,10,0,0" VerticalAlignment="Top" Width="43" Click="placeholderTrybik_Click"/>
+    </Grid>
+</Page>
