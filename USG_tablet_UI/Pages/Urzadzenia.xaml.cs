@@ -76,13 +76,11 @@ namespace USG_tablet_UI.Pages
                 this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
             }).Start(); */
 
-            BeaconHandler bh = new BeaconHandler();
-            bh.startListening();
             new Thread(() =>
             {
                 while (true)
                 {
-                    this.lblGain.Dispatcher.Invoke((Action)delegate { txtIP.Text = GlobalSettings.beaconDistance; });
+                    BeaconTestHandler bth = new BeaconTestHandler();
                 }
             }).Start();
         }

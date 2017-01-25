@@ -90,6 +90,7 @@
     <Compile Include="Classes funcionality\BackgroundBeaconTask.cs" />
     <Compile Include="Classes funcionality\BeaconHandler.cs" />
     <Compile Include="Classes data\Badanie.cs" />
+    <Compile Include="Classes funcionality\BeaconTestHandler.cs" />
     <Compile Include="Classes funcionality\DatabaseHandler.cs" />
     <Compile Include="Classes data\Pacjent.cs" />
     <Compile Include="Classes funcionality\GlobalSettings.cs" />
