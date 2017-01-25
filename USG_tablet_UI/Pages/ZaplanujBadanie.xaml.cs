@@ -32,6 +32,7 @@ namespace USG_tablet_UI.Pages
             txtGodzina.HorizontalContentAlignment = HorizontalAlignment.Center;
             sourceList = dbh.getListaTypowBadanFromDB();
             cboRodzajBadania.ItemsSource = sourceList;
+            calendar.SelectedDate = DateTime.Now;
         }
 
         private void cboRodzajBadania_SelectionChanged(object sender, SelectionChangedEventArgs e)
