@@ -13,5 +13,6 @@
         <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="158,225,0,0" VerticalAlignment="Top" Width="186" Height="35" Click="btnKalendarz_Click"/>
         <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="377,7,0,0" VerticalAlignment="Top" Width="101" MouseDown="lblUsername_MouseDown"/>
         <Button x:Name="placeholderTrybik" Content="TRYBIK" HorizontalAlignment="Left" Margin="454,10,0,0" VerticalAlignment="Top" Width="43" Click="placeholderTrybik_Click"/>
+        <Button x:Name="btnTestBeaconEnable" Content="TEST BEACONS" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Width="90" Click="btnTestBeaconEnable_Click"/>
     </Grid>
 </Page>

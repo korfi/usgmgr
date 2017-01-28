@@ -67,22 +67,14 @@ namespace USG_tablet_UI.Pages
 
         private void btnRefreshGain_Click(object sender, RoutedEventArgs e)
         {
-            /*conn.send("getgain");     to jest poprawna, normalna funkcjonalnosc
+            conn.send("getgain");
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
                 TCPlistener tl = new TCPlistener(12000);
                 string content = tl.getData();
                 this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
-            }).Start(); */
-
-            new Thread(() =>
-            {
-                while (true)
-                {
-                    BeaconTestHandler bth = new BeaconTestHandler();
-                }
-            }).Start();
+            }).Start(); 
         }
     }
 }

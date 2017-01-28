@@ -12,7 +12,9 @@ namespace USG_tablet_UI
         public static List<string> rodzajeBadan = new List<String>() { "USG", "Tomografia", "RTG" };
         public static Pacjent lastPacjentSelected = null;
         public static Badanie lastBadanieSelected = null;
-        public static string beaconDistance = null;
+        public static string beaconDistance = "not found";
+        public static BeaconWindow beaconWindow = null;
+        public static MainWindow mainWidnow = null;
 
     }
 }

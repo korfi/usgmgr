@@ -83,7 +83,7 @@ namespace USG_tablet_UI
                 }
                 catch (ArgumentException e)
                 {
-                    Console.WriteLine("something broke");
+                    Console.WriteLine("something broke: " + e.ToString());
                 }
 
             }
@@ -93,9 +93,9 @@ namespace USG_tablet_UI
                 server.Shutdown(SocketShutdown.Both);
                 server.Disconnect(true);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-
+                Console.WriteLine("Something broke: " + e.ToString());
             }
 
 

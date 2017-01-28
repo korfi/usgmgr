@@ -16,17 +16,20 @@ using System.Windows.Shapes;
 namespace USG_tablet_UI
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy DeviceFoundPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DeviceFoundPage : Page
     {
-        public MainWindow()
+        public DeviceFoundPage()
         {
             InitializeComponent();
-            NavigationFrame.Navigate(new StartPage());
-            GlobalSettings.beaconWindow = new BeaconWindow();
-            GlobalSettings.mainWidnow = this;
+            lblWykrytoUrzadzenie.HorizontalContentAlignment = HorizontalAlignment.Center;
         }
 
+        private void btnUScan_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.mainWidnow.NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Urzadzenia.xaml", UriKind.Relative));
+            GlobalSettings.beaconWindow.Close();
+        }
     }
 }

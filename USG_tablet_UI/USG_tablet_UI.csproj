@@ -87,10 +87,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes funcionality\BackgroundBeaconTask.cs" />
-    <Compile Include="Classes funcionality\BeaconHandler.cs" />
+    <Compile Include="BeaconWindow.xaml.cs">
+      <DependentUpon>BeaconWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes data\Badanie.cs" />
-    <Compile Include="Classes funcionality\BeaconTestHandler.cs" />
+    <Compile Include="Classes funcionality\BeaconHandler.cs" />
     <Compile Include="Classes funcionality\DatabaseHandler.cs" />
     <Compile Include="Classes data\Pacjent.cs" />
     <Compile Include="Classes funcionality\GlobalSettings.cs" />
@@ -100,6 +101,9 @@
     </Compile>
     <Compile Include="Pages\DanePacjenta.xaml.cs">
       <DependentUpon>DanePacjenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DeviceFoundPage.xaml.cs">
+      <DependentUpon>DeviceFoundPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\HistoriaBadan.xaml.cs">
       <DependentUpon>HistoriaBadan.xaml</DependentUpon>
@@ -116,11 +120,19 @@
     <Compile Include="Classes funcionality\TCPconnection.cs" />
     <Compile Include="Classes funcionality\TCPlistener.cs" />
     <Compile Include="Classes funcionality\VideoHandler.cs" />
+    <Page Include="BeaconWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\DaneBadania.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\DanePacjenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DeviceFoundPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

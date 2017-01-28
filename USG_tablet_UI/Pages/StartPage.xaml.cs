@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -48,6 +49,11 @@ namespace USG_tablet_UI
         private void lblUsername_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
+        }
+
+        private void btnTestBeaconEnable_Click(object sender, RoutedEventArgs e)
+        {
+            BeaconHandler bh = new BeaconHandler();        
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿<Page x:Class="USG_tablet_UI.DeviceFoundPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+	Title="DeviceFoundPage">
+
+    <Grid>
+        <Label x:Name="lblWykrytoUrzadzenie" Content="Wykryto nowe urządzenie" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="515"/>
+        <Button x:Name="btnUScan" Content="uScan" HorizontalAlignment="Left" Margin="122,154,0,0" VerticalAlignment="Top" Width="266" Height="51" Click="btnUScan_Click"/>
+
+    </Grid>
+</Page>
