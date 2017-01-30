@@ -25,11 +25,12 @@ namespace USG_tablet_UI
 
         private void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
         {
-            if (triggered == false)
+            /*if (triggered == false)
             {
                 GlobalSettings.beaconWindow.Dispatcher.Invoke((Action)delegate { GlobalSettings.beaconWindow.Show(); });
                 triggered = true;
-            }        
+            }  */
+            GlobalSettings.beaconDistance = Convert.ToString(eventArgs.RawSignalStrengthInDBm);
         }
     }
 
