@@ -54,13 +54,6 @@ namespace USG_tablet_UI
         private void btnTestBeaconEnable_Click(object sender, RoutedEventArgs e)
         {
             BeaconHandler bh = new BeaconHandler();        
-            new Thread(() =>
-            {
-                while (true)
-                {
-                    this.lblUsername.Dispatcher.Invoke((Action)delegate { lblUsername.Content = GlobalSettings.beaconDistance; });
-                }               
-            }).Start(); 
         }
     }
 }
