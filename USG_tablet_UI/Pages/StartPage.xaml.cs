@@ -56,7 +56,10 @@ namespace USG_tablet_UI
             BeaconHandler bh = new BeaconHandler();        
             new Thread(() =>
             {
-                this.lblUsername.Dispatcher.Invoke((Action)delegate { lblUsername.Content = GlobalSettings.beaconDistance; });
+                while (true)
+                {
+                    this.lblUsername.Dispatcher.Invoke((Action)delegate { lblUsername.Content = GlobalSettings.beaconDistance; });
+                }               
             }).Start(); 
         }
     }
