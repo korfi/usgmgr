@@ -1,0 +1,8 @@
+﻿<Window x:Class="USG_tablet_UI.BeaconWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BeaconWindow" Height="415" Width="557" Closed="Window_Closed">
+    <Grid>
+        <Frame Name="NavigationFrame" NavigationUIVisibility="Hidden" Width="525" Margin="10,10,3,9"/>
+    </Grid>
+</Window>
