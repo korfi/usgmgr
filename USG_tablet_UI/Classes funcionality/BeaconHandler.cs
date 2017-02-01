@@ -15,13 +15,14 @@ namespace USG_tablet_UI
 
         BluetoothLEAdvertisementWatcher watcher;
         bool triggered = false;
-        int i = 0;
+        int i;
 
         public BeaconHandler()
         {
             watcher = new BluetoothLEAdvertisementWatcher();
             watcher.Received += OnAdvertisementReceived;
             watcher.Start();
+            i = 0;
         }
 
         private void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
@@ -32,7 +33,7 @@ namespace USG_tablet_UI
                 triggered = true;
             }  */
             GlobalSettings.beaconDistance = Convert.ToString(i);
-            i++;
+            i+=1;
         }
     }
 
