@@ -23,7 +23,7 @@ namespace USG_tablet_UI
     {
         public StartPage()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void btnDanePacjentow_Click(object sender, RoutedEventArgs e)
@@ -53,7 +53,8 @@ namespace USG_tablet_UI
 
         private void btnTestBeaconEnable_Click(object sender, RoutedEventArgs e)
         {
-            BeaconHandler bh = new BeaconHandler();        
+            BeaconHandler bh = new BeaconHandler();
+            GlobalSettings.mainWidnow.winHandleInit();
         }
     }
 }

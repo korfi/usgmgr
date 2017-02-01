@@ -77,6 +77,7 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="UIAutomationClient" />
     <Reference Include="WinBeacon">
       <HintPath>..\packages\WinBeacon.1.1.0.110\lib\net45\WinBeacon.dll</HintPath>
     </Reference>

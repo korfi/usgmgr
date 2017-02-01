@@ -31,7 +31,7 @@ namespace USG_tablet_UI
                 GlobalSettings.beaconWindow.Dispatcher.Invoke((Action)delegate { GlobalSettings.beaconWindow.Show(); });
                 triggered = true;
             }  */
-            GlobalSettings.beaconDistance = i;
+            GlobalSettings.beaconDistance = Convert.ToString(i);
             i++;
         }
     }
