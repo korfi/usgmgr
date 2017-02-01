@@ -54,7 +54,6 @@ namespace USG_tablet_UI
         private void btnTestBeaconEnable_Click(object sender, RoutedEventArgs e)
         {
             BeaconHandler bh = new BeaconHandler();
-            GlobalSettings.mainWidnow.winHandleInit();
         }
     }
 }

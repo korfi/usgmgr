@@ -76,9 +76,9 @@ namespace USG_tablet_UI.Pages
                 this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
             }).Start(); */
             new Thread(() =>
-                {
-                    this.lblGain.Dispatcher.Invoke((Action)delegate { txtIP.Text = GlobalSettings.beaconDistance; });
-                }).Start();
+            {
+                this.txtIP.Dispatcher.Invoke((Action)delegate { txtIP.Text = GlobalSettings.beaconDistance; });
+            }).Start();
         }
     }
 }

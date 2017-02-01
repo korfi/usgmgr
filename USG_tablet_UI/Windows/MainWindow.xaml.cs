@@ -29,10 +29,5 @@ namespace USG_tablet_UI
             GlobalSettings.mainWidnow = this;
         }
 
-        public void winHandleInit()
-        {
-            var asForm = System.Windows.Automation.AutomationElement.FromHandle(new WindowInteropHelper(this).Handle); 
-        }
-
     }
 }
