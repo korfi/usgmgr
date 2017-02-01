@@ -13,7 +13,16 @@
         <Label x:Name="lblRodzajBadania" Content="Rodzaj badania:" HorizontalAlignment="Left" Margin="39,317,0,0" VerticalAlignment="Top" Width="306" FontSize="40"/>
         <ComboBox x:Name="cboRodzajBadania" HorizontalAlignment="Left" Margin="418,317,0,0" VerticalAlignment="Top" Width="294" SelectionChanged="cboRodzajBadania_SelectionChanged" FontSize="30" Height="63"/>
         <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,1214,0,0" VerticalAlignment="Top" Width="780" Height="56" Click="btnWstecz_Click" FontSize="24"/>
-        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="39,532,0,0" VerticalAlignment="Top" Width="271" Visibility="Visible" GotFocus="calendar_GotFocus" Height="386" RenderTransformOrigin="0.5,0.5"/>
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="39,532,0,0" VerticalAlignment="Top" Width="282" Visibility="Visible" GotFocus="calendar_GotFocus" Height="386" RenderTransformOrigin="0.5,0.5">
+            <Calendar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.2" ScaleX="1.2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Calendar.RenderTransform>
+        </Calendar>
         <Label x:Name="lblGodzina" Content="Godzina" HorizontalAlignment="Left" Margin="443,625,0,0" VerticalAlignment="Top" Visibility="Visible" FontSize="40" Height="76" Width="179"/>
         <TextBox x:Name="txtGodzina" HorizontalAlignment="Left" Height="54" Margin="454,735,0,0" TextWrapping="Wrap" Text="13:00" VerticalAlignment="Top" Width="159"  Visibility="Visible" FontSize="36"/>
         <Button x:Name="btnZaplanuj" Content="Zaplanuj" HorizontalAlignment="Left" Margin="222,1028,0,0" VerticalAlignment="Top" Width="352" Height="93" Click="btnZaplanuj_Click"  Visibility="Visible" FontSize="30"/>
