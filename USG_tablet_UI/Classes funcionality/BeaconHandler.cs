@@ -15,25 +15,21 @@ namespace USG_tablet_UI
 
         BluetoothLEAdvertisementWatcher watcher;
         bool triggered = false;
-        int i;
 
         public BeaconHandler()
         {
             watcher = new BluetoothLEAdvertisementWatcher();
             watcher.Received += OnAdvertisementReceived;
             watcher.Start();
-            i = 0;
         }
 
         private void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
         {
-            /*if (triggered == false)
+            if (triggered == false)
             {
                 GlobalSettings.beaconWindow.Dispatcher.Invoke((Action)delegate { GlobalSettings.beaconWindow.Show(); });
                 triggered = true;
-            }  */
-            GlobalSettings.beaconDistance = Convert.ToString(i);
-            i+=1;
+            }  
         }
     }
 

@@ -67,20 +67,14 @@ namespace USG_tablet_UI.Pages
 
         private void btnRefreshGain_Click(object sender, RoutedEventArgs e)
         {
-            /*conn.send("getgain");
+            conn.send("getgain");
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
                 TCPlistener tl = new TCPlistener(12000);
                 string content = tl.getData();
                 this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
-            }).Start(); */
-            new Thread(() =>
-            {
-                while (true) { 
-                  this.txtIP.Dispatcher.Invoke((Action)delegate { txtIP.Text = GlobalSettings.beaconDistance; });
-                }
-            }).Start();
+            }).Start(); 
         }
     }
 }
