@@ -27,6 +27,7 @@ namespace USG_tablet_UI
         public ListaPacjentow()
         {
             InitializeComponent();
+            txtSearchPacjenci = new TouchEnabledTextBox();
             DatabaseHandler dbh = new DatabaseHandler();
             originalList = dbh.getListaPacjentowFromDB();
             currList = originalList;

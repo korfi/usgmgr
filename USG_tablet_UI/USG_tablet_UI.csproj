@@ -94,6 +94,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes funcionality\TouchEnabledTextbox.cs" />
     <Compile Include="Windows\BeaconWindow.xaml.cs">
       <DependentUpon>BeaconWindow.xaml</DependentUpon>
     </Compile>
