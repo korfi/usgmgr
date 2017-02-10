@@ -10,10 +10,12 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStyle="None"
+        WindowState= "Maximized" >
     <!-- WindowStyle="None" to trzeba wrzucic do taga powyzej -->
     <Grid>
-        <Frame Name="NavigationFrame" NavigationUIVisibility="Hidden" Width="525" Margin="10,10,3,9"/>
+        <Frame Name="NavigationFrame" NavigationUIVisibility="Hidden" Margin="10,0" />
     </Grid>
 
 </Window>
