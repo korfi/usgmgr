@@ -94,6 +94,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\Landscape\StartPageLandscape.xaml.cs">
+      <DependentUpon>StartPageLandscape.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\BeaconWindow.xaml.cs">
       <DependentUpon>BeaconWindow.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
     <Compile Include="Classes funcionality\TCPconnection.cs" />
     <Compile Include="Classes funcionality\TCPlistener.cs" />
     <Compile Include="Classes funcionality\VideoHandler.cs" />
+    <Page Include="Pages\Landscape\StartPageLandscape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\BeaconWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace USG_tablet_UI
 {
@@ -23,7 +24,8 @@ namespace USG_tablet_UI
     {
         public StartPage()
         {
-            InitializeComponent();          
+            InitializeComponent();        
+            GlobalSettings.currentPage = "StartPage";
         }
 
         private void btnDanePacjentow_Click(object sender, RoutedEventArgs e)
@@ -55,5 +57,6 @@ namespace USG_tablet_UI
         {
             BeaconHandler bh = new BeaconHandler();
         }
+
     }
 }

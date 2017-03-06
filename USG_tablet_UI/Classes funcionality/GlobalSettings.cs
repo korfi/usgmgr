@@ -14,7 +14,7 @@ namespace USG_tablet_UI
         public static Badanie lastBadanieSelected = null;
         public static string beaconDistance = "not found";
         public static BeaconWindow beaconWindow = null;
-        public static MainWindow mainWidnow = null;
-
+        public static MainWindow mainWindow = null;
+        public static string currentPage = null;
     }
 }

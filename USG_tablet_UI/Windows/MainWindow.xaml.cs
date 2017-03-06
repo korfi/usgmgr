@@ -26,7 +26,20 @@ namespace USG_tablet_UI
             InitializeComponent();
             NavigationFrame.Navigate(new StartPage());
             GlobalSettings.beaconWindow = new BeaconWindow();
-            GlobalSettings.mainWidnow = this;
+            GlobalSettings.mainWindow = this;
+            Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new System.EventHandler(orientationChanged);
+        }
+
+        private void orientationChanged(object sender, EventArgs e)
+        {
+            if (GlobalSettings.currentPage == "StartPage")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "StartPageLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
+            }
         }
 
     }

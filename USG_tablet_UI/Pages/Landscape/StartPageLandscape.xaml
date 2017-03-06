@@ -1,0 +1,19 @@
+﻿<Page x:Class="USG_tablet_UI.Pages.Landscape.StartPageLandscape"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+	Title="StartPageLandscape">
+
+    <Grid>
+        <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="454,185,0,0" VerticalAlignment="Top" Width="351" Height="89"/>
+        <Button x:Name="btnUrzadzenia" Content="Urządzenia" HorizontalAlignment="Left" Margin="454,353,0,0" VerticalAlignment="Top" Width="351" Height="89"/>
+        <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="454,513,0,0" VerticalAlignment="Top" Width="351" Height="98"/>
+        <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="944,43,0,0" VerticalAlignment="Top" Width="137" Height="68"/>
+        <Button x:Name="placeholderTrybik" Content="TRYBIK" HorizontalAlignment="Left" Margin="1123,43,0,0" VerticalAlignment="Top" Width="112" Height="68"/>
+        <Button x:Name="btnTestBeaconEnable" Content="TEST BEACONS" HorizontalAlignment="Left" Margin="47,665,0,0" VerticalAlignment="Top" Width="339" Height="95"/>
+        <Label x:Name="lblLandscape" Content="Landscape" HorizontalAlignment="Left" Margin="1132,723,0,0" VerticalAlignment="Top" FontSize="20"/>
+    </Grid>
+</Page>

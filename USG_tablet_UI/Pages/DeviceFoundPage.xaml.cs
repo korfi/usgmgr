@@ -28,7 +28,7 @@ namespace USG_tablet_UI
 
         private void btnUScan_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.mainWidnow.NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Urzadzenia.xaml", UriKind.Relative));
+            GlobalSettings.mainWindow.NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Urzadzenia.xaml", UriKind.Relative));
             GlobalSettings.beaconWindow.Close();
         }
     }
