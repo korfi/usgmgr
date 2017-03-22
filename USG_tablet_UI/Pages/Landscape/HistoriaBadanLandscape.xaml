@@ -1,0 +1,16 @@
+﻿<Page x:Class="USG_tablet_UI.Pages.HistoriaBadanLandscape"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+	Title="HistoriaBadanLandscape">
+
+    <Grid>
+        <TextBox x:Name="txtSearchBadania" HorizontalAlignment="Left" Height="23" Margin="120,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" TextChanged="txtSearchBadania_TextChanged"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
+        <ListBox x:Name="lstBadania" HorizontalAlignment="Left" Height="222" Margin="163,60,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="lstBadania_SelectionChanged"/>
+
+    </Grid>
+</Page>
