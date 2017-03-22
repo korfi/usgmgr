@@ -25,6 +25,7 @@ namespace USG_tablet_UI.Pages
             InitializeComponent();
             lblNazwaBadania.Content = GlobalSettings.lastBadanieSelected;
             lblNazwaBadania.HorizontalContentAlignment = HorizontalAlignment.Center;
+            GlobalSettings.currentPage = "DaneBadania";
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)

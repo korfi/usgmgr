@@ -25,6 +25,7 @@ namespace USG_tablet_UI.Pages
             InitializeComponent();
             lblImieNazwisko.Content = GlobalSettings.lastPacjentSelected;
             lblImieNazwisko.HorizontalContentAlignment = HorizontalAlignment.Center;
+            GlobalSettings.currentPage = "DanePacjenta";
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)

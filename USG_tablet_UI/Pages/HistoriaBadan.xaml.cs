@@ -27,6 +27,7 @@ namespace USG_tablet_UI.Pages
         public HistoriaBadan()
         {
             InitializeComponent();
+            GlobalSettings.currentPage = "HistoriaBadan";
             DatabaseHandler dbh = new DatabaseHandler();
             originalList = dbh.getListaBadanFromDB();
             currList = originalList;

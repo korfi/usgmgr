@@ -16,20 +16,19 @@ using System.Windows.Shapes;
 namespace USG_tablet_UI.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy PanelUzytkownika.xaml
+    /// Logika interakcji dla klasy Kalendarz.xaml
     /// </summary>
-    public partial class PanelUzytkownika : Page
+    public partial class KalendarzLandscape : Page
     {
-        public PanelUzytkownika()
+        public KalendarzLandscape()
         {
             InitializeComponent();
-            GlobalSettings.currentPage = "PanelUzytkownika";
-            lblUsername.HorizontalContentAlignment = HorizontalAlignment.Center;
+            GlobalSettings.currentPage = "KalendarzLandscape";
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPage.xaml", UriKind.Relative));
         }
     }
 }

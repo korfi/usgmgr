@@ -94,8 +94,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\Landscape\DaneBadaniaLandscape.xaml.cs">
+      <DependentUpon>DaneBadaniaLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\DanePacjentaLandscape.xaml.cs">
+      <DependentUpon>DanePacjentaLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\HistoriaBadanLandscape.xaml.cs">
+      <DependentUpon>HistoriaBadanLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\KalendarzLandscape.xaml.cs">
+      <DependentUpon>KalendarzLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\ListaPacjentowLandscape.xaml.cs">
+      <DependentUpon>ListaPacjentowLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\PanelUzytkownikaLandscape.xaml.cs">
+      <DependentUpon>PanelUzytkownikaLandscape.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Landscape\StartPageLandscape.xaml.cs">
       <DependentUpon>StartPageLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\UrzadzeniaLandscape.xaml.cs">
+      <DependentUpon>UrzadzeniaLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landscape\ZaplanujBadanieLandscape.xaml.cs">
+      <DependentUpon>ZaplanujBadanieLandscape.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\BeaconWindow.xaml.cs">
       <DependentUpon>BeaconWindow.xaml</DependentUpon>
@@ -130,9 +154,41 @@
     <Compile Include="Classes funcionality\TCPconnection.cs" />
     <Compile Include="Classes funcionality\TCPlistener.cs" />
     <Compile Include="Classes funcionality\VideoHandler.cs" />
+    <Page Include="Pages\Landscape\DaneBadaniaLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Landscape\DanePacjentaLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Landscape\HistoriaBadanLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Landscape\KalendarzLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Landscape\ListaPacjentowLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Landscape\PanelUzytkownikaLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\Landscape\StartPageLandscape.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Landscape\UrzadzeniaLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Landscape\ZaplanujBadanieLandscape.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\BeaconWindow.xaml">
       <SubType>Designer</SubType>

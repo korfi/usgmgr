@@ -23,6 +23,7 @@ namespace USG_tablet_UI.Pages
         public Kalendarz()
         {
             InitializeComponent();
+            GlobalSettings.currentPage = "Kalendarz";
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)

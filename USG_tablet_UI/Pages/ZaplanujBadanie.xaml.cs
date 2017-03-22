@@ -27,6 +27,7 @@ namespace USG_tablet_UI.Pages
         public ZaplanujBadanie()
         {
             InitializeComponent();
+            GlobalSettings.currentPage = "ZaplanujBadanie";
             lblUsername.HorizontalContentAlignment = HorizontalAlignment.Center;
             lblGodzina.HorizontalContentAlignment = HorizontalAlignment.Center;
             txtGodzina.HorizontalContentAlignment = HorizontalAlignment.Center;

@@ -29,6 +29,7 @@ namespace USG_tablet_UI.Pages
         public Urzadzenia()
         {
             InitializeComponent();
+            GlobalSettings.currentPage = "Urzadzenia";
             vh = new VideoHandler(imgVideo);
         }
 

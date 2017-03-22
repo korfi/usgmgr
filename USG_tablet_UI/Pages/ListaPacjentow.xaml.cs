@@ -27,6 +27,7 @@ namespace USG_tablet_UI
         public ListaPacjentow()
         {
             InitializeComponent();
+            GlobalSettings.currentPage = "ListaPacjentow";
             DatabaseHandler dbh = new DatabaseHandler();
             originalList = dbh.getListaPacjentowFromDB();
             currList = originalList;
