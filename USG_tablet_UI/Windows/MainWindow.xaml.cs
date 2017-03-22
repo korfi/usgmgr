@@ -40,6 +40,70 @@ namespace USG_tablet_UI
             {
                 NavigationFrame.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
             }
+            else if (GlobalSettings.currentPage == "DaneBadania")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\DaneBadaniaLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "DaneBadaniaLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\DaneBadania.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "DanePacjenta")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjentaLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "DanePacjentaLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\DanePacjenta.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "HistoriaBadan")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\HistoriaBadanLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "HistoriaBadanLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\HistoriaBadan.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "Kalendarz")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\KalendarzLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "KalendarzLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Kalendarz.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "ListaPacjentow")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\ListaPacjentowLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "ListaPacjentowLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\ListaPacjentow.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "PanelUzytkownika")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\PanelUzytkownikaLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "PanelUzytkownikaLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "Urzadzenia")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\UrzadzeniaLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "UrzadzeniaLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Urzadzenia.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "ZaplanujBadanie")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\ZaplanujBadanieLandscape.xaml", UriKind.Relative));
+            }
+            else if (GlobalSettings.currentPage == "ZaplanujBadanieLandscape")
+            {
+                NavigationFrame.NavigationService.Navigate(new Uri("Pages\\ZaplanujBadanie.xaml", UriKind.Relative));
+            }
         }
 
     }

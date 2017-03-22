@@ -8,12 +8,12 @@
 	Title="StartPageLandscape">
 
     <Grid>
-        <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="454,185,0,0" VerticalAlignment="Top" Width="351" Height="89"/>
-        <Button x:Name="btnUrzadzenia" Content="Urządzenia" HorizontalAlignment="Left" Margin="454,353,0,0" VerticalAlignment="Top" Width="351" Height="89"/>
-        <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="454,513,0,0" VerticalAlignment="Top" Width="351" Height="98"/>
-        <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="944,43,0,0" VerticalAlignment="Top" Width="137" Height="68"/>
-        <Button x:Name="placeholderTrybik" Content="TRYBIK" HorizontalAlignment="Left" Margin="1123,43,0,0" VerticalAlignment="Top" Width="112" Height="68"/>
-        <Button x:Name="btnTestBeaconEnable" Content="TEST BEACONS" HorizontalAlignment="Left" Margin="47,665,0,0" VerticalAlignment="Top" Width="339" Height="95"/>
+        <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="454,185,0,0" VerticalAlignment="Top" Width="351" Height="89" Click="btnDanePacjentow_Click"/>
+        <Button x:Name="btnUrzadzenia" Content="Urządzenia" HorizontalAlignment="Left" Margin="454,353,0,0" VerticalAlignment="Top" Width="351" Height="89" Click="btnUrzadzenia_Click"/>
+        <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="454,513,0,0" VerticalAlignment="Top" Width="351" Height="98" Click="btnKalendarz_Click"/>
+        <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="944,43,0,0" VerticalAlignment="Top" Width="137" Height="68" MouseDown="lblUsername_MouseDown"/>
+        <Button x:Name="placeholderTrybik" Content="TRYBIK" HorizontalAlignment="Left" Margin="1123,43,0,0" VerticalAlignment="Top" Width="112" Height="68" Click="placeholderTrybik_Click"/>
+        <Button x:Name="btnTestBeaconEnable" Content="TEST BEACONS" HorizontalAlignment="Left" Margin="47,665,0,0" VerticalAlignment="Top" Width="339" Height="95" Click="btnTestBeaconEnable_Click"/>
         <Label x:Name="lblLandscape" Content="Landscape" HorizontalAlignment="Left" Margin="1132,723,0,0" VerticalAlignment="Top" FontSize="20"/>
     </Grid>
 </Page>
