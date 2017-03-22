@@ -46,7 +46,7 @@ namespace USG_tablet_UI.Pages
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjenta.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjentaLandscape.xaml", UriKind.Relative));
         }
 
         private void btnZaplanuj_Click(object sender, RoutedEventArgs e)
@@ -57,7 +57,7 @@ namespace USG_tablet_UI.Pages
             txtGodzina.Text = dateToInsert;
 
             dbh.insertBadanieIntoDB(GlobalSettings.lastPacjentSelected, cboRodzajBadania.SelectedItem.ToString(), dateToInsert);
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjenta.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjentaLandscape.xaml", UriKind.Relative));
         }
 
         private void calendar_GotFocus(object sender, RoutedEventArgs e)

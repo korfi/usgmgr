@@ -39,13 +39,13 @@ namespace USG_tablet_UI.Pages
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjenta.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjentaLandscape.xaml", UriKind.Relative));
         }
 
         private void lstBadania_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GlobalSettings.lastBadanieSelected = (Badanie)lstBadania.SelectedItem;
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DaneBadania.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DaneBadaniaLandscape.xaml", UriKind.Relative));
         }
 
         private void txtSearchBadania_TextChanged(object sender, TextChangedEventArgs e)

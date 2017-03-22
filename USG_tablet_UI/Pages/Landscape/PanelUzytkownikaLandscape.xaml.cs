@@ -29,7 +29,7 @@ namespace USG_tablet_UI.Pages
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
         }
     }
 }

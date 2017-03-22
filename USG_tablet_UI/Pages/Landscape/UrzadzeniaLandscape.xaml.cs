@@ -37,7 +37,7 @@ namespace USG_tablet_UI.Pages
         {
             vh.disconnect();
             if (conn!=null) conn.disconnect();
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
         }
 
         private void btnConnect_Click(object sender, RoutedEventArgs e)

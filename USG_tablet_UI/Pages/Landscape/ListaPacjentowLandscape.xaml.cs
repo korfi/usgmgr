@@ -36,13 +36,13 @@ namespace USG_tablet_UI
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
         }
 
         private void lstPacjenci_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GlobalSettings.lastPacjentSelected = (Pacjent)lstPacjenci.SelectedItem;
-            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjenta.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Landscape\\DanePacjentaLandscape.xaml", UriKind.Relative));
         }
 
         private void txtSearchPacjenci_TextChanged(object sender, TextChangedEventArgs e)
