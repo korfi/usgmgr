@@ -4,22 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace USG_tablet_UI
 {
     class DatabaseHandler
     {
 
-        string connetionString = null;
-        SqlConnection connection;
-        SqlCommand command;
+        SQLiteConnection dbConnection = null;
+        string connectionString = null;
         string sql = null;
-        SqlDataReader dataReader;
+        SQLiteCommand command = null;
+        SQLiteDataReader reader = null;
 
         public DatabaseHandler()
         {
-            connetionString = "Data Source=korfi.ddns.net;Initial Catalog=USG;User ID=uzytkownik;Password=haslo123!@#";
-            connection = new SqlConnection(connetionString);
+            SQLiteConnection.CreateFile("USGdb.sqlite");
+            connectionString = "Data Source=MyDatabase.sqlite;Version=3;";
+            dbConnection = new SQLiteConnection(connectionString);
+            dbConnection.Open();
+
+            // poniżej znajduja sie zakomentowane komendy SQL sluzace do stworzenia bazy i zapelnienia jej danymi
+
+            /*sql = "CREATE TABLE rodzajbadania (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, rodzaj varchar(50) NOT NULL);";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "CREATE TABLE pacjenci (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, imie varchar(50) NOT NULL, nazwisko varchar(50) NOT NULL);";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "CREATE TABLE badania (pacjentID INTEGER NOT NULL, rodzajbadaniaID INTEGER NOT NULL, data datetime NOT NULL, PRIMARY KEY (pacjentID, data), FOREIGN KEY (pacjentID) REFERENCES pacjenci(id), FOREIGN KEY (rodzajbadaniaID) REFERENCES rodzajbadania(id));";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();*/
+
+            /*sql = "INSERT INTO pacjenci (id, imie, nazwisko) VALUES (1, 'Jan', 'Kowalski');";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "INSERT INTO pacjenci (imie, nazwisko) VALUES ('Adam', 'Nowak');";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "INSERT INTO pacjenci (imie, nazwisko) VALUES ('Jacek', 'Rzepa');";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "INSERT INTO rodzajbadania (id, rodzaj) VALUES (1, 'USG');";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "INSERT INTO rodzajbadania (rodzaj) VALUES ('Tomografia');";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "INSERT INTO rodzajbadania (rodzaj) VALUES ('RTG');";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();*/
             
         }
 
@@ -27,19 +68,15 @@ namespace USG_tablet_UI
         {
             List<Pacjent> listaPacjentow = new List<Pacjent>();
             try
-            {     
-                connection.Open();
+            {   
                 sql = "SELECT * FROM pacjenci";
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                while (dataReader.Read())
+                command = new SQLiteCommand(sql, dbConnection);
+                reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    Pacjent p = new Pacjent((int)dataReader.GetValue(0), (string)dataReader.GetValue(1), (string)dataReader.GetValue(2));
+                    Pacjent p = new Pacjent(Convert.ToInt32((long)reader["id"]), (string)reader["imie"], (string)reader["nazwisko"]);
                     listaPacjentow.Add(p);
                 }
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
             }
             catch (Exception ex)
             {
@@ -53,19 +90,15 @@ namespace USG_tablet_UI
             List<Badanie> listaBadan = new List<Badanie>();
             try
             {
-                connection.Open();
                 sql = "SELECT pacjenci.id, pacjenci.imie, pacjenci.nazwisko, badania.data, rodzajbadania.rodzaj FROM badania INNER JOIN pacjenci ON pacjenci.id = badania.pacjentID INNER JOIN rodzajbadania ON rodzajbadania.ID = badania.rodzajbadaniaID WHERE pacjenci.id=" + GlobalSettings.lastPacjentSelected.id;
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                while (dataReader.Read())
-                { 
-                    Pacjent p = new Pacjent((int)dataReader.GetValue(0), (string)dataReader.GetValue(1), (string)dataReader.GetValue(2));
-                    Badanie b = new Badanie((DateTime)dataReader.GetValue(3), (string)dataReader.GetValue(4), p);
+                command = new SQLiteCommand(sql, dbConnection);
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Pacjent p = new Pacjent(Convert.ToInt32((long)reader["id"]), (string)reader["imie"], (string)reader["nazwisko"]);
+                    Badanie b = new Badanie((DateTime)reader["data"], (string)reader["rodzaj"], p);
                     listaBadan.Add(b);
                 }
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
             }
             catch (Exception ex)
             {
@@ -79,18 +112,14 @@ namespace USG_tablet_UI
             List<string> listaTypow = new List<string>();
             try
             {
-                connection.Open();
                 sql = "SELECT * FROM rodzajbadania";
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                while (dataReader.Read())
+                command = new SQLiteCommand(sql, dbConnection);
+                reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    string typ = (string)dataReader.GetValue(1);
+                    string typ = (string)reader["rodzaj"];
                     listaTypow.Add(typ);
                 }
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
             }
             catch (Exception ex)
             {
@@ -101,12 +130,9 @@ namespace USG_tablet_UI
 
         public void insertBadanieIntoDB(Pacjent p, string typ, string date)
         {
-            connection.Open();
             string sql = "INSERT INTO badania(pacjentID,rodzajbadaniaID,data) VALUES (" + p.id + ",(SELECT id FROM rodzajbadania WHERE rodzaj='" + typ + "'),'" + date + "')";
-            command = new SqlCommand(sql, connection);
+            command = new SQLiteCommand(sql, dbConnection);
             int rowsAffected = command.ExecuteNonQuery();
-            command.Dispose();
-            connection.Close();
         }
 
 
