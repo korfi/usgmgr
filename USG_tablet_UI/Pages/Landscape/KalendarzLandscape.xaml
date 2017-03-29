@@ -8,8 +8,8 @@
 	Title="KalendarzLandscape">
 
     <Grid>
-        <Button x:Name="placeholderKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="93,42,0,0" VerticalAlignment="Top" Width="336" Height="218"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
+        <Button x:Name="placeholderKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="241,136,0,0" VerticalAlignment="Top" Width="656" Height="340"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,704,0,0" VerticalAlignment="Top" Width="1260" Height="86" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

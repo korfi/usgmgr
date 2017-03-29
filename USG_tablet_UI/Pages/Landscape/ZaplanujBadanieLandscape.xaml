@@ -8,16 +8,14 @@
       Margin="0"
 	  Title="ZaplanujBadanieLandscape">
 
-    <Grid Height="1280" VerticalAlignment="Bottom">
+    <Grid Margin="0,-480,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="45*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label x:Name="lblUsername" Content="Jan Kowalski" Margin="122,190,0,0" FontSize="60" HorizontalAlignment="Left" Width="500" Height="90" VerticalAlignment="Top"/>
-        <Label x:Name="lblRodzajBadania" Content="Rodzaj badania:" Margin="33,0,0,866" VerticalAlignment="Bottom" FontSize="40" HorizontalAlignment="Left" Width="306" Grid.RowSpan="2"/>
-        <ComboBox x:Name="cboRodzajBadania" Margin="0,0,82,866" VerticalAlignment="Bottom" SelectionChanged="cboRodzajBadania_SelectionChanged" FontSize="30" Height="63" Grid.RowSpan="2" HorizontalAlignment="Right" Width="294"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,834,0,0" VerticalAlignment="Top" Width="780" Height="56" Click="btnWstecz_Click" FontSize="24" Grid.Row="1"/>
-        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="39,152,0,0" VerticalAlignment="Top" Width="282" Visibility="Visible" GotFocus="calendar_GotFocus" Height="386" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+        <Label x:Name="lblUsername" Content="Jan Kowalski" Margin="410,98,0,0" FontSize="60" HorizontalAlignment="Left" Width="500" Height="90" VerticalAlignment="Top"/>
+        <Label x:Name="lblRodzajBadania" Content="Rodzaj badania:" Margin="61,0,0,914" VerticalAlignment="Bottom" FontSize="40" HorizontalAlignment="Left" Width="306"/>
+        <ComboBox x:Name="cboRodzajBadania" Margin="0,0,106,914" VerticalAlignment="Bottom" SelectionChanged="cboRodzajBadania_SelectionChanged" FontSize="30" Height="63" HorizontalAlignment="Right" Width="294"/>
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="59,540,0,0" VerticalAlignment="Top" Width="282" Visibility="Visible" GotFocus="calendar_GotFocus" Height="386" RenderTransformOrigin="0.5,0.5">
             <Calendar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.2" ScaleX="1.2"/>
@@ -27,9 +25,10 @@
                 </TransformGroup>
             </Calendar.RenderTransform>
         </Calendar>
-        <Label x:Name="lblGodzina" Content="Godzina" HorizontalAlignment="Left" Margin="443,245,0,0" VerticalAlignment="Top" Visibility="Visible" FontSize="40" Height="76" Width="179" Grid.Row="1"/>
-        <TextBox x:Name="txtGodzina" HorizontalAlignment="Left" Height="54" Margin="454,355,0,0" TextWrapping="Wrap" Text="13:00" VerticalAlignment="Top" Width="159"  Visibility="Visible" FontSize="36" Grid.Row="1"/>
-        <Button x:Name="btnZaplanuj" Content="Zaplanuj" HorizontalAlignment="Left" Margin="232,0,0,159" VerticalAlignment="Bottom" Width="352" Height="93" Click="btnZaplanuj_Click"  Visibility="Visible" FontSize="30" Grid.Row="1"/>
+        <Label x:Name="lblGodzina" Content="Godzina" HorizontalAlignment="Left" Margin="463,720,0,0" VerticalAlignment="Top" Visibility="Visible" FontSize="40" Height="76" Width="179"/>
+        <TextBox x:Name="txtGodzina" HorizontalAlignment="Left" Height="54" Margin="463,818,0,0" TextWrapping="Wrap" Text="13:00" VerticalAlignment="Top" Width="159"  Visibility="Visible" FontSize="36"/>
+        <Button x:Name="btnZaplanuj" Content="Zaplanuj" HorizontalAlignment="Left" Margin="822,0,0,419" VerticalAlignment="Bottom" Width="352" Height="93" Click="btnZaplanuj_Click"  Visibility="Visible" FontSize="30"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="0,1184,0,0" VerticalAlignment="Top" Width="1260" Height="86" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

@@ -8,9 +8,9 @@
 	Title="ListaPacjentowLandscape">
 
     <Grid Height="350" VerticalAlignment="Top">
-        <TextBox x:Name="txtSearchPacjenci" HorizontalAlignment="Left" Height="23" Margin="120,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" TextChanged="txtSearchPacjenci_TextChanged"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
-        <ListBox x:Name="lstPacjenci" HorizontalAlignment="Left" Height="222" Margin="163,60,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="lstPacjenci_SelectionChanged"/>
+        <TextBox x:Name="txtSearchPacjenci" HorizontalAlignment="Left" Height="23" Margin="486,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" TextChanged="txtSearchPacjenci_TextChanged"/>
+        <ListBox x:Name="lstPacjenci" HorizontalAlignment="Left" Height="357" Margin="486,232,0,-239" VerticalAlignment="Top" Width="298" SelectionChanged="lstPacjenci_SelectionChanged"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,704,0,-440" VerticalAlignment="Top" Width="1260" Height="86" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

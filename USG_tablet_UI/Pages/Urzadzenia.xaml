@@ -8,13 +8,13 @@
 	Title="Urzadzenia">
 
     <Grid>
-        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="205" Margin="10,42,0,0" VerticalAlignment="Top" Width="244"/>
-        <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="274,131,0,0" VerticalAlignment="Top" Width="105" Height="34" Click="btnFreeze_Click"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
-        <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="402,131,0,0" VerticalAlignment="Top" Width="104" Height="34" Click="btnGainUp_Click"/>
-        <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="274,194,0,0" VerticalAlignment="Top" Width="105" Height="34" Click="btn8bit_Click"/>
-        <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="402,194,0,0" VerticalAlignment="Top" Width="104" Height="34" Click="btnGainDown_Click"/>
-        <Label x:Name="lblGain" Content="Gain: " HorizontalAlignment="Left" Margin="274,259,0,0" VerticalAlignment="Top" Width="105"/>
+        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="484" Margin="55,540,0,0" VerticalAlignment="Top" Width="664"/>
+        <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="571,94,0,0" VerticalAlignment="Top" Width="174" Height="53" Click="btnFreeze_Click"/>
+        <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="126,293,0,0" VerticalAlignment="Top" Width="173" Height="49" Click="btnGainUp_Click"/>
+        <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="339,94,0,0" VerticalAlignment="Top" Width="173" Height="53" Click="btn8bit_Click"/>
+        <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="126,356,0,0" VerticalAlignment="Top" Width="173" Height="44" Click="btnGainDown_Click"/>
+        <Label x:Name="lblGain" Content="Gain: " HorizontalAlignment="Left" Margin="166,424,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,1195,0,0" VerticalAlignment="Top" Width="780" Height="75" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

@@ -14,6 +14,5 @@
         <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="944,43,0,0" VerticalAlignment="Top" Width="137" Height="68" MouseDown="lblUsername_MouseDown"/>
         <Button x:Name="placeholderTrybik" Content="TRYBIK" HorizontalAlignment="Left" Margin="1123,43,0,0" VerticalAlignment="Top" Width="112" Height="68" Click="placeholderTrybik_Click"/>
         <Button x:Name="btnTestBeaconEnable" Content="TEST BEACONS" HorizontalAlignment="Left" Margin="47,665,0,0" VerticalAlignment="Top" Width="339" Height="95" Click="btnTestBeaconEnable_Click"/>
-        <Label x:Name="lblLandscape" Content="Landscape" HorizontalAlignment="Left" Margin="1132,723,0,0" VerticalAlignment="Top" FontSize="20"/>
     </Grid>
 </Page>

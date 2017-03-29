@@ -8,10 +8,10 @@
 	Title="DanePacjentaLandscape">
 
     <Grid>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
-        <Label x:Name="lblImieNazwisko" Content="lblImieNazwisko" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Height="37" Width="505" FontSize="24"/>
-        <Button x:Name="btnZaplanujBadanie" Content="Zaplanuj badanie" HorizontalAlignment="Left" Margin="194,209,0,0" VerticalAlignment="Top" Width="137" Height="30" Click="btnZaplanujBadanie_Click"/>
-        <Button x:Name="btnHistoriaBadan" Content="Historia badań" HorizontalAlignment="Left" Margin="194,261,0,0" VerticalAlignment="Top" Width="137" Height="30" Click="btnHistoriaBadan_Click"/>
+        <Label x:Name="lblImieNazwisko" Content="lblImieNazwisko" HorizontalAlignment="Left" Margin="390,80,0,0" VerticalAlignment="Top" Height="37" Width="505" FontSize="24"/>
+        <Button x:Name="btnZaplanujBadanie" Content="Zaplanuj badanie" HorizontalAlignment="Left" Margin="198,272,0,0" VerticalAlignment="Top" Width="329" Height="178" Click="btnZaplanujBadanie_Click"/>
+        <Button x:Name="btnHistoriaBadan" Content="Historia badań" HorizontalAlignment="Left" Margin="698,272,0,0" VerticalAlignment="Top" Width="329" Height="178" Click="btnHistoriaBadan_Click"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,704,0,0" VerticalAlignment="Top" Width="1260" Height="86" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

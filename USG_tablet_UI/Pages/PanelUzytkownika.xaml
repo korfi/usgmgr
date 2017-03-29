@@ -8,10 +8,10 @@
 	Title="PanelUzytkownika">
 
     <Grid>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
-        <Button x:Name="btnZmienHaslo" Content="ZMIEŃ HASŁO" HorizontalAlignment="Left" Margin="144,104,0,0" VerticalAlignment="Top" Width="237" Height="43"/>
-        <Button x:Name="btnWyloguj" Content="WYLOGUJ" HorizontalAlignment="Left" Margin="144,209,0,0" VerticalAlignment="Top" Width="237" Height="43"/>
-        <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="505" FontSize="24"/>
+        <Button x:Name="btnZmienHaslo" Content="ZMIEŃ HASŁO" HorizontalAlignment="Left" Margin="174,509,0,0" VerticalAlignment="Top" Width="459" Height="172"/>
+        <Button x:Name="btnWyloguj" Content="WYLOGUJ" HorizontalAlignment="Left" Margin="174,833,0,0" VerticalAlignment="Top" Width="459" Height="151"/>
+        <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="174,125,0,0" VerticalAlignment="Top" Width="505" FontSize="24"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,1195,0,0" VerticalAlignment="Top" Width="780" Height="75" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

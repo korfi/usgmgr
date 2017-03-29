@@ -8,9 +8,9 @@
 	Title="HistoriaBadanLandscape">
 
     <Grid>
-        <TextBox x:Name="txtSearchBadania" HorizontalAlignment="Left" Height="23" Margin="120,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" TextChanged="txtSearchBadania_TextChanged"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
-        <ListBox x:Name="lstBadania" HorizontalAlignment="Left" Height="222" Margin="163,60,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="lstBadania_SelectionChanged"/>
+        <TextBox x:Name="txtSearchBadania" HorizontalAlignment="Left" Height="23" Margin="459,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" TextChanged="txtSearchBadania_TextChanged"/>
+        <ListBox x:Name="lstBadania" HorizontalAlignment="Left" Height="411" Margin="459,138,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="lstBadania_SelectionChanged"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,704,0,0" VerticalAlignment="Top" Width="1260" Height="86" Click="btnWstecz_Click"/>
 
     </Grid>
 </Page>

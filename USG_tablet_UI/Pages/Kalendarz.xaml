@@ -8,8 +8,17 @@
 	Title="Kalendarz">
 
     <Grid>
-        <Button x:Name="placeholderKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="93,42,0,0" VerticalAlignment="Top" Width="336" Height="218"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,1195,0,0" VerticalAlignment="Top" Width="780" Height="75" Click="btnWstecz_Click"/>
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="255,364,0,0" VerticalAlignment="Top" Width="282" Visibility="Visible" Height="386" RenderTransformOrigin="0.5,0.5">
+            <Calendar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.2" ScaleX="1.2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Calendar.RenderTransform>
+        </Calendar>
 
     </Grid>
 </Page>
