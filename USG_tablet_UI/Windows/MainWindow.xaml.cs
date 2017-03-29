@@ -90,14 +90,20 @@ namespace USG_tablet_UI
             }
             else if (GlobalSettings.currentPage == "Urzadzenia")
             {
+                GlobalSettings.gainRefreshTimer.Stop();
                 GlobalSettings.vh.disconnect();
                 if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
+                GlobalSettings.conn = null;
+                GlobalSettings.vh = null;
                 NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\UrzadzeniaLandscape.xaml", UriKind.Relative));
             }
             else if (GlobalSettings.currentPage == "UrzadzeniaLandscape")
             {
+                GlobalSettings.gainRefreshTimer.Stop();
                 GlobalSettings.vh.disconnect();
                 if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
+                GlobalSettings.conn = null;
+                GlobalSettings.vh = null;
                 NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Urzadzenia.xaml", UriKind.Relative));
             }
             else if (GlobalSettings.currentPage == "ZaplanujBadanie")
