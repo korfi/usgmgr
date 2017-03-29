@@ -11,14 +11,10 @@
         <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="205" Margin="10,42,0,0" VerticalAlignment="Top" Width="244"/>
         <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="274,131,0,0" VerticalAlignment="Top" Width="105" Height="34" Click="btnFreeze_Click"/>
         <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,318,0,0" VerticalAlignment="Top" Width="505" Height="32" Click="btnWstecz_Click"/>
-        <Label x:Name="lblIP" Content="IP:" HorizontalAlignment="Left" Margin="274,39,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Height="23" Margin="311,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="btnConnect" Content="CONNECT" HorizontalAlignment="Left" Margin="441,42,0,0" VerticalAlignment="Top" Width="65" Height="23" Click="btnConnect_Click"/>
         <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="402,131,0,0" VerticalAlignment="Top" Width="104" Height="34" Click="btnGainUp_Click"/>
         <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="274,194,0,0" VerticalAlignment="Top" Width="105" Height="34" Click="btn8bit_Click"/>
         <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="402,194,0,0" VerticalAlignment="Top" Width="104" Height="34" Click="btnGainDown_Click"/>
         <Label x:Name="lblGain" Content="Gain: " HorizontalAlignment="Left" Margin="274,259,0,0" VerticalAlignment="Top" Width="105"/>
-        <Button x:Name="btnRefreshGain" Content="REFRESH GAIN" HorizontalAlignment="Left" Margin="402,251,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.84,0.5" Height="34" Click="btnRefreshGain_Click"/>
 
     </Grid>
 </Page>

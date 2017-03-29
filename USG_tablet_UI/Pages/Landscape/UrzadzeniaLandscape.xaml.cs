@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Threading;
 
 namespace USG_tablet_UI.Pages
 {
@@ -23,58 +24,59 @@ namespace USG_tablet_UI.Pages
     public partial class UrzadzeniaLandscape : Page
     {
 
-        VideoHandler vh = null;
-        TCPconnection conn = null;
-
         public UrzadzeniaLandscape()
         {
             InitializeComponent();
             GlobalSettings.currentPage = "UrzadzeniaLandscape";
-            vh = new VideoHandler(imgVideo);
+            GlobalSettings.vh = new VideoHandler(imgVideo);
+            GlobalSettings.vh.connect(GlobalSettings.uScanIP);
+            GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
+            GlobalSettings.gainRefreshTimer = new DispatcherTimer();
+            GlobalSettings.gainRefreshTimer.Tick += new EventHandler(refreshGain);
+            GlobalSettings.gainRefreshTimer.Interval = new TimeSpan(0, 0, 0, 2);
+            GlobalSettings.gainRefreshTimer.Start(); 
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            vh.disconnect();
-            if (conn!=null) conn.disconnect();
+            GlobalSettings.vh.disconnect();
+            if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
             this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
-        }
-
-        private void btnConnect_Click(object sender, RoutedEventArgs e)
-        {
-            vh.connect(txtIP.Text);
-            conn = new TCPconnection(txtIP.Text, 13000);
         }
 
         private void btnFreeze_Click(object sender, RoutedEventArgs e)
         {
-            conn.send("freeze");
+            GlobalSettings.conn.send("freeze");
         }
 
         private void btnGainUp_Click(object sender, RoutedEventArgs e)
         {
-            conn.send("gainup");
+            GlobalSettings.conn.send("gainup");
         }
 
         private void btnGainDown_Click(object sender, RoutedEventArgs e)
         {
-            conn.send("gaindown");
+            GlobalSettings.conn.send("gaindown");
         }
 
         private void btn8bit_Click(object sender, RoutedEventArgs e)
         {
-            conn.send("8bitgreyscale");
+            GlobalSettings.conn.send("8bitgreyscale");
         }
 
-        private void btnRefreshGain_Click(object sender, RoutedEventArgs e)
+        private void refreshGain(object sender, EventArgs e)
         {
-            conn.send("getgain");
+            GlobalSettings.conn.send("getgain");
             new Thread(() =>
             {
-                Thread.CurrentThread.IsBackground = true;
-                TCPlistener tl = new TCPlistener(12000);
-                string content = tl.getData();
-                this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
+                try
+                {
+                    Thread.CurrentThread.IsBackground = true;
+                    TCPlistener tl = new TCPlistener(12000);
+                    string content = tl.getData();
+                    this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
+                }
+                catch (Exception ex) { };
             }).Start(); 
         }
     }

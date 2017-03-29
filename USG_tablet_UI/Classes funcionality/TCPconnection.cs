@@ -33,16 +33,20 @@ namespace USG_tablet_UI
 
         public void disconnect()
         {
-            s.Disconnect(false);
+            s.Disconnect(true);
             s.Close();
         }
 
         public void send(String msg)
         {
-            byte[] byData = System.Text.Encoding.ASCII.GetBytes(msg);
-            s.Send(byData);
+            try                    // bo nie mozna uzyskac dostepu do usunietego obiektu po powrocie do glownego ekranu
+            {           
+                byte[] byData = System.Text.Encoding.ASCII.GetBytes(msg);
+                s.Send(byData);
+            }
+            catch (Exception ex) { }
         }
 
 
     }
-}
+}   

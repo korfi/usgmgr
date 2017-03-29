@@ -25,7 +25,6 @@ namespace USG_tablet_UI
         System.Windows.Controls.Image image;
         Socket server;
         Thread backgroundThread;
-        Boolean disconnectFlag = false;
 
         public VideoHandler(System.Windows.Controls.Image im)
         {
@@ -37,8 +36,8 @@ namespace USG_tablet_UI
             IPEndPoint ipep = new IPEndPoint(IPAddress.Parse(ipAddr), 9050);
 
             server = new Socket(AddressFamily.InterNetwork,
-                            SocketType.Stream, ProtocolType.Tcp);
-            disconnectFlag = false;
+                                         SocketType.Stream, ProtocolType.Tcp);
+            GlobalSettings.videoServiceDisconnectFlag = false;
             try
             {
                 server.Connect(ipep);
@@ -58,14 +57,14 @@ namespace USG_tablet_UI
 
         public void disconnect()
         {
-            disconnectFlag = true;
+            GlobalSettings.videoServiceDisconnectFlag = true;
         }
 
         private void connect(Socket server)
         {
             byte[] data = new byte[1024];
 
-            while (disconnectFlag == false)
+            while (GlobalSettings.videoServiceDisconnectFlag == false)
             {
                 data = ReceiveVarData(server);
                 MemoryStream ms = new MemoryStream(data);
