@@ -49,27 +49,27 @@ namespace USG_tablet_UI.Pages
 
         private void btnFreeze_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.conn.send("freeze");
+            GlobalSettings.conn.send("frze");
         }
 
         private void btnGainUp_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.conn.send("gainup");
+            GlobalSettings.conn.send("gaup");
         }
 
         private void btnGainDown_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.conn.send("gaindown");
+            GlobalSettings.conn.send("gadn");
         }
 
         private void btn8bit_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.conn.send("8bitgreyscale");
+            GlobalSettings.conn.send("8bgr");
         }
 
         private void refreshGain(object sender, EventArgs e)
         {
-            GlobalSettings.conn.send("getgain");
+            GlobalSettings.conn.send("ggai");
             new Thread(() =>
             {
                 try
