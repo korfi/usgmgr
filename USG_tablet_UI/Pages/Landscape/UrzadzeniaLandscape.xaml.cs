@@ -44,6 +44,7 @@ namespace USG_tablet_UI.Pages
             if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
             GlobalSettings.conn = null;
             GlobalSettings.vh = null;
+            GlobalSettings.gainRequestCompleted = true;
             this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
         }
 

@@ -95,6 +95,7 @@ namespace USG_tablet_UI
                 if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
                 GlobalSettings.conn = null;
                 GlobalSettings.vh = null;
+                GlobalSettings.gainRequestCompleted = true;
                 NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Landscape\\UrzadzeniaLandscape.xaml", UriKind.Relative));
             }
             else if (GlobalSettings.currentPage == "UrzadzeniaLandscape")
@@ -104,6 +105,7 @@ namespace USG_tablet_UI
                 if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
                 GlobalSettings.conn = null;
                 GlobalSettings.vh = null;
+                GlobalSettings.gainRequestCompleted = true;
                 NavigationFrame.NavigationService.Navigate(new Uri("Pages\\Urzadzenia.xaml", UriKind.Relative));
             }
             else if (GlobalSettings.currentPage == "ZaplanujBadanie")
