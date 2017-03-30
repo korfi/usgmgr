@@ -78,6 +78,7 @@ namespace USG_tablet_UI
                         bmi.StreamSource = ms;
                         bmi.EndInit();
                         this.image.Source = bmi;
+                        System.Threading.Thread.Sleep(5);
                     }));
                 }
                 catch (ArgumentException e)
