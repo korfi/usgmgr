@@ -33,9 +33,13 @@ namespace USG_tablet_UI.Pages
             GlobalSettings.vh = new VideoHandler(imgVideo);
             GlobalSettings.vh.connect(GlobalSettings.uScanIP);          
             GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
-            GlobalSettings.gainRefreshTimer = new DispatcherTimer();
-            GlobalSettings.gainRefreshTimer.Tick += new EventHandler(refreshGain);
-            GlobalSettings.gainRefreshTimer.Interval = new TimeSpan(0, 0, 0, 2);
+            if (GlobalSettings.gainRefreshTimer == null)
+            {            
+                GlobalSettings.gainRefreshTimer = new DispatcherTimer();
+                GlobalSettings.gainRefreshTimer.Tick += new EventHandler(refreshGain);
+                GlobalSettings.gainRefreshTimer.Interval = new TimeSpan(0, 0, 0, 2);
+
+            }
             GlobalSettings.gainRefreshTimer.Start(); 
         }
 
@@ -85,7 +89,7 @@ namespace USG_tablet_UI.Pages
                         this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
                         GlobalSettings.gainRequestCompleted = true;
                     }
-                    catch (Exception ex) { };
+                    catch (Exception ex) { GlobalSettings.gainRequestCompleted = true; };
                 }).Start();
             }
         }
