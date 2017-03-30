@@ -22,5 +22,6 @@ namespace USG_tablet_UI
         public static TCPconnection conn = null;
         public static DispatcherTimer gainRefreshTimer = null;
         public static Boolean videoServiceDisconnectFlag = false;
+        public static Boolean gainRequestCompleted = true;
     }
 }

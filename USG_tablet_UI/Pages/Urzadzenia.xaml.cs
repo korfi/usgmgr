@@ -71,18 +71,23 @@ namespace USG_tablet_UI.Pages
 
         private void refreshGain(object sender, EventArgs e)
         {
-            GlobalSettings.conn.send("getgain");
-            new Thread(() =>
+            if (GlobalSettings.gainRequestCompleted == true)
             {
-                try
+                GlobalSettings.gainRequestCompleted = false;
+                GlobalSettings.conn.send("getgain");
+                new Thread(() =>
                 {
-                    Thread.CurrentThread.IsBackground = true;
-                    TCPlistener tl = new TCPlistener(12000);
-                    string content = tl.getData();
-                    this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
-                }
-                catch (Exception ex) { };
-            }).Start(); 
+                    try
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+                        TCPlistener tl = new TCPlistener(12000);
+                        string content = tl.getData();
+                        this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
+                        GlobalSettings.gainRequestCompleted = true;
+                    }
+                    catch (Exception ex) { };
+                }).Start();
+            }
         }
     }
 }
