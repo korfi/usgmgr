@@ -56,7 +56,10 @@ namespace USG_tablet_UI.Pages
 
         private void btnFreeze_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.conn.send("frze");
+            new Thread(() =>
+            {
+                GlobalSettings.conn.send("frze");
+            }).Start();
         }
 
         private void btnGainUp_Click(object sender, RoutedEventArgs e)
