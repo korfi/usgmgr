@@ -51,7 +51,7 @@ namespace USG_tablet_UI.Pages
             GlobalSettings.conn = null;
             GlobalSettings.vh = null;
             GlobalSettings.gainRequestCompleted = true;
-            GlobalSettings.videoServiceDisconnectFlag = true;
+            GlobalSettings.udpSock.Disconnect(true);
             this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
 

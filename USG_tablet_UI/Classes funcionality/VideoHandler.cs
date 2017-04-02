@@ -37,7 +37,7 @@ namespace USG_tablet_UI
             ipep = new IPEndPoint(IPAddress.Any, 9050);
             IPEndPoint remote = new IPEndPoint(IPAddress.Any, 9050);
             ep = (EndPoint) remote;
-            GlobalSettings.udpSock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            if (GlobalSettings.udpSock == null) GlobalSettings.udpSock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             GlobalSettings.udpSock.Bind(ipep);
 
             backgroundThread = new Thread(delegate()
@@ -84,7 +84,7 @@ namespace USG_tablet_UI
 
             try
             {
-                s.Close();
+                //s.Close();
             }
             catch (Exception e)
             {
