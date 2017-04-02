@@ -8,7 +8,11 @@
 	Title="StartPage">
 
     <Grid>
-        <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="158,235,0,0" VerticalAlignment="Top" Width="462" Height="123" Click="btnDanePacjentow_Click"/>
+        <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="158,235,0,0" VerticalAlignment="Top" Width="462" Height="123" Click="btnDanePacjentow_Click">
+            <!--<Button.Background>
+                <ImageBrush ImageSource=""/>
+            </Button.Background>-->
+        </Button>
         <Button x:Name="btnUrzadzenia" Content="Urządzenia" HorizontalAlignment="Left" Margin="158,485,0,0" VerticalAlignment="Top" Width="462" Height="115" Click="btnUrzadzenia_Click"/>
         <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="158,741,0,0" VerticalAlignment="Top" Width="462" Height="119" Click="btnKalendarz_Click"/>
         <Label x:Name="lblUsername" Content="Jan Kowalski" HorizontalAlignment="Left" Margin="592,18,0,0" VerticalAlignment="Top" Width="100" MouseDown="lblUsername_MouseDown"/>
