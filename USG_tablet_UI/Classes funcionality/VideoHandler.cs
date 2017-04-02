@@ -23,8 +23,9 @@ namespace USG_tablet_UI
     class VideoHandler
     {
         System.Windows.Controls.Image image;
-        Socket server;
         Thread backgroundThread;
+        IPEndPoint ipep;
+        EndPoint ep = null;
 
         public VideoHandler(System.Windows.Controls.Image im)
         {
@@ -33,23 +34,15 @@ namespace USG_tablet_UI
 
         public void connect(String ipAddr)
         {
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Parse(ipAddr), 9050);
+            ipep = new IPEndPoint(IPAddress.Any, 9050);
+            IPEndPoint remote = new IPEndPoint(IPAddress.Any, 0);
+            ep = (EndPoint) remote;
+            Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            s.Bind(ipep);
 
-            server = new Socket(AddressFamily.InterNetwork,
-                                         SocketType.Stream, ProtocolType.Tcp);
-            GlobalSettings.videoServiceDisconnectFlag = false;
-            try
-            {
-                server.Connect(ipep);
-            }
-            catch (SocketException ex)
-            {
-                Console.WriteLine("Unable to connect to server.");
-                Console.WriteLine(ex.ToString());
-            }
             backgroundThread = new Thread(delegate()
             {
-                connect(server);
+                connect(s);
             });
             backgroundThread.IsBackground = true;
             backgroundThread.Start();
@@ -60,13 +53,15 @@ namespace USG_tablet_UI
             GlobalSettings.videoServiceDisconnectFlag = true;
         }
 
-        private void connect(Socket server)
+        private void connect(Socket s)
         {
-            byte[] data = new byte[1024];
+            byte[] data = new byte[20480];
 
             while (GlobalSettings.videoServiceDisconnectFlag == false)
             {
-                data = ReceiveVarData(server);
+                data = new byte[20480];
+                s.ReceiveFrom(data, ref ep);
+
                 MemoryStream ms = new MemoryStream(data);
                 try
                 {
@@ -89,8 +84,7 @@ namespace USG_tablet_UI
 
             try
             {
-                server.Shutdown(SocketShutdown.Both);
-                server.Disconnect(true);
+                s.Close();
             }
             catch (Exception e)
             {
