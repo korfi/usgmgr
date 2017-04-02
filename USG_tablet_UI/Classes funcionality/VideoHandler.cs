@@ -35,14 +35,14 @@ namespace USG_tablet_UI
         public void connect(String ipAddr)
         {
             ipep = new IPEndPoint(IPAddress.Any, 9050);
-            IPEndPoint remote = new IPEndPoint(IPAddress.Any, 0);
+            IPEndPoint remote = new IPEndPoint(IPAddress.Any, 9050);
             ep = (EndPoint) remote;
-            Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            s.Bind(ipep);
+            GlobalSettings.udpSock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            GlobalSettings.udpSock.Bind(ipep);
 
             backgroundThread = new Thread(delegate()
             {
-                connect(s);
+                connect(GlobalSettings.udpSock);
             });
             backgroundThread.IsBackground = true;
             backgroundThread.Start();
@@ -60,7 +60,7 @@ namespace USG_tablet_UI
             while (GlobalSettings.videoServiceDisconnectFlag == false)
             {
                 data = new byte[20480];
-                s.ReceiveFrom(data, ref ep);
+                GlobalSettings.udpSock.ReceiveFrom(data, ref ep);
 
                 MemoryStream ms = new MemoryStream(data);
                 try

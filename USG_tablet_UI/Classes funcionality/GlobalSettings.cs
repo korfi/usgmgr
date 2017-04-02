@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using System.Net.Sockets;
 
 namespace USG_tablet_UI
 {
@@ -23,5 +24,6 @@ namespace USG_tablet_UI
         public static DispatcherTimer gainRefreshTimer = null;
         public static Boolean videoServiceDisconnectFlag = false;
         public static Boolean gainRequestCompleted = true;
+        public static Socket udpSock = null;
     }
 }
